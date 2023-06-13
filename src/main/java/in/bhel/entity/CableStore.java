@@ -3,9 +3,8 @@ package in.bhel.entity;
 public class CableStore {
 	private int sno = 0;
 	private double length = 0;
-	private String dbNo = "";
-	private String lrNo = "";
-	private String lrDate = "";
+	private double dbNo = 0;
+	private String dbDate = "";
 	private String cableCode = "";
 	private String drumNo = "";
 	private String uniqueCode = "";
@@ -22,23 +21,19 @@ public class CableStore {
 	public void setLength(double length) {
 		this.length = length;
 	}
-	public String getDbNo() {
+	
+	public double getDbNo() {
 		return dbNo;
 	}
-	public void setDbNo(String dbNo) {
+	public void setDbNo(double dbNo) {
 		this.dbNo = dbNo;
 	}
-	public String getLrNo() {
-		return lrNo;
+	
+	public String getDbDate() {
+		return dbDate;
 	}
-	public void setLrNo(String lrNo) {
-		this.lrNo = lrNo;
-	}
-	public String getLrDate() {
-		return lrDate;
-	}
-	public void setLrDate(String lrDate) {
-		this.lrDate = lrDate;
+	public void setDbDate(String dbDate) {
+		this.dbDate = dbDate;
 	}
 	public String getCableCode() {
 		return cableCode;

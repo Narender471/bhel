@@ -27,15 +27,18 @@ public class JDBCUtil {
 		
 	}
 	public static void cleanUp(Connection con, Statement stmt, ResultSet resultSet) throws SQLException {
-		if(resultSet != null) {
-			resultSet.close();
+		if(con != null) {
+			con.close();
+			System.out.println("connection object closed");
 		}
 		if(stmt != null) {
 			stmt.close();
 		}
-		if(con != null) {
-			con.close();
+		if(resultSet != null) {
+			resultSet.close();
 		}
+		
+	
 	}
 
 }
