@@ -22,12 +22,19 @@
 			<label for="cableCode">Cable Description:</label> <select name="cableCode" id="cableCode">
 				<option value="11pkv630001c">11 KV 1 Core X 630 SQ MM CABLE</option>
 				<option value="11pkv240003c">11 KV 3 Core X 240 SQ MM CABLE</option>
+				<option value="11pkv240001c">11 KV 1 Core X 240 SQ MM CABLE</option>
+				<option value="3p3kv240001c">3.3 KV 1 Core X 240 SQ MM CABLE</option>
+				<option value="3p3kv185003c">3.3 KV 3 Core X 185 SQ MM CABLE</option>
 				<option value="1p1kv630001c">1.1 KV 1 Core X 630 SQ MM CABLE</option>
 				<option value="1p1kv400001c">1.1 KV 1 Core X 400 SQ MM CABLE</option>
 				<option value="1p1kv240003c">1.1 KV 3 Core X 240 SQ MM CABLE</option>
+				<option value="1p1kv1853p5c">1.1 KV 3.5 Core X 185 SQ MM CABLE</option>
+				<option value="1p1kv185003c">1.1 KV 3 Core X 185 SQ MM CABLE</option>
 				<option value="1p1kv150003c">1.1 KV 3 Core X 150 SQ MM CABLE</option>
 				<option value="1p1kv095002c">1.1 KV 2 Core X 95 SQ MM CABLE</option>
+				<option value="1p1kv095003c">1.1 KV 3 Core X 95 SQ MM CABLE</option>
 				<option value="1p1kv0503p5c">1.1 KV 3.5 Core X 50 SQ MM CABLE</option>
+				<option value="1p1kv050003c">1.1 KV 3 Core X 50 SQ MM CABLE</option>
 				<option value="1p1kv0253p5c">1.1 KV 3.5 Core X 25 SQ MM CABLE</option>
 				<option value="1p1kv025003c">1.1 KV 3 Core X 25 SQ MM CABLE</option>
 				<option value="1p1kv025002c">1.1 KV 2 Core X 25 SQ MM CABLE</option>
