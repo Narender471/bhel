@@ -20,9 +20,11 @@ public class JDBCUtil {
 	}
 	public static Connection getJdbcConnection() throws SQLException {
 		
-		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pssr", "root", "root");
-		System.out.println("Connection Object Created");
-		
+		String url = "jdbc:mysql://localhost:3306/bhel"; 
+		String user = "root"; 
+		String password = "narender@123"; 
+		Connection connection = DriverManager.getConnection(url, user, password); 
+		System.out.println("connection object created..."); 
 		return connection;
 		
 	}

@@ -18,9 +18,10 @@ public class CableStoreImpl implements CableStoreDao {
 	@Override
 	public boolean insertDrumToStore(CableStore cs) {
 		
-		boolean flag = false;
+		boolean flag = true;
 		
 		try {
+			
 			connection = JDBCUtil.getJdbcConnection();	
 			String sqlInsertQuery = "insert into drumatstore (`length`, `dbNo`, `dbDate`, `cableCode`, `drumNo`, `uniqueCode`) values (?,?,?,?,?,?)";
 			pstmt = connection.prepareStatement(sqlInsertQuery);
