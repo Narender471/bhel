@@ -38,6 +38,7 @@
 				<option value="1p1kv0503p5c">1.1 KV 3.5 Core X 50 SQ MM CABLE</option>
 				<option value="1p1kv050003c">1.1 KV 3 Core X 50 SQ MM CABLE</option>
 				<option value="1p1kv050002c">1.1 KV 2 Core X 50 SQ MM CABLE</option>
+				<option value="1p1kv040001c">1.1 KV 1 Core X 40 SQ MM CABLE</option>
 				<option value="1p1kv035001c">1.1 KV 1 Core X 35 SQ MM CABLE</option>
 				<option value="1p1kv0253p5c">1.1 KV 3.5 Core X 25 SQ MM CABLE</option>
 				<option value="1p1kv025003c">1.1 KV 3 Core X 25 SQ MM CABLE</option>

@@ -22,7 +22,7 @@ public class JDBCUtil {
 		
 		String url = "jdbc:mysql://localhost:3306/bhel"; 
 		String user = "root"; 
-		String password = "narender@123"; 
+		String password = "root"; 
 		Connection connection = DriverManager.getConnection(url, user, password); 
 		System.out.println("connection object created..."); 
 		return connection;
