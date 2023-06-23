@@ -31,7 +31,7 @@ public class Test {
 //		try(FileReader reader = new FileReader("C:\\Users\\Narender\\Downloads\\drumdata.json")) {
 //				Object obj = parser.parse(reader);
 //				JSONArray emplist = (JSONArray)obj;
-//				for (int i = 0; i< 1;i++) {
+//				for (int i = 0; i< 487;i++) {
 //					JSONObject jobj = (JSONObject) emplist.get(i);
 //					CableStore cs = new CableStore();
 //					cs.setLength(Double.parseDouble(jobj.get("length").toString()));
@@ -51,32 +51,32 @@ public class Test {
 //		}catch(FileNotFoundException e) { e.printStackTrace(); }
 //		catch(IOException e) { e.printStackTrace(); }
 //		catch(Exception e) { e.printStackTrace(); }
-		Connection connection = null;
-		PreparedStatement pstmt = null;
-		ResultSet resultSet = null;
-		try {
-			connection = AWSUtil.getJdbcConnection();
-			String sqlSelectQuery = "select * from drumdata where cableCode = '1p1kv2p5002c'";
-			pstmt = connection.prepareStatement(sqlSelectQuery);
-			resultSet = pstmt.executeQuery();
-			while(resultSet.next()) {
-				CableStore cs = new CableStore();
-				CableStoreDao csd = new CableStoreImpl();
-				cs.setLength(resultSet.getDouble("length"));
-				cs.setDbNo(resultSet.getDouble("dbNo"));
-				cs.setDbDate(resultSet.getString("dbDate"));
-				cs.setCableCode(resultSet.getString("cableCode"));
-				cs.setDrumNo(resultSet.getString("drumNo"));
-				cs.setUniqueCode(resultSet.getString("uniqueCode"));
-				System.out.println(csd.insertDrumIntoCableDrum("1p1kv2p5002c", cs ));
-				
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally {
-			AWSUtil.cleanUp(connection, pstmt, resultSet);
-		}
+//		Connection connection = null;
+//		PreparedStatement pstmt = null;
+//		ResultSet resultSet = null;
+//		try {
+//			connection = AWSUtil.getJdbcConnection();
+//			String sqlSelectQuery = "select * from drumdata where cableCode = '1p1kv004005c'";
+//			pstmt = connection.prepareStatement(sqlSelectQuery);
+//			resultSet = pstmt.executeQuery();
+//			while(resultSet.next()) {
+//				CableStore cs = new CableStore();
+//				CableStoreDao csd = new CableStoreImpl();
+//				cs.setLength(resultSet.getDouble("length"));
+//				cs.setDbNo(resultSet.getDouble("dbNo"));
+//				cs.setDbDate(resultSet.getString("dbDate"));
+//				cs.setCableCode(resultSet.getString("cableCode"));
+//				cs.setDrumNo(resultSet.getString("drumNo"));
+//				cs.setUniqueCode(resultSet.getString("uniqueCode"));
+//				System.out.println(csd.insertDrumIntoCableDrum("1p1kv004005c", cs ));
+//				
+//			}
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}finally {
+//			AWSUtil.cleanUp(connection, pstmt, resultSet);
+//		}
 
 		
 

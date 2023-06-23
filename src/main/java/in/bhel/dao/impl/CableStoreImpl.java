@@ -85,20 +85,21 @@ public class CableStoreImpl implements CableStoreDao {
 			String drumType = "";
 
 			connection = AWSUtil.getJdbcConnection();
-			if(cs.getLength() >420 && cs.getLength() < 580) {
-				
+			if (cs.getLength() > 420 && cs.getLength() < 580) {
+
 				drumType = "B";
-				
-			} else if(cs.getLength() >650 && cs.getLength() < 850) {
+
+			} else if (cs.getLength() > 650 && cs.getLength() < 850) {
 				drumType = "C";
-				
-			}else if(cs.getLength() >900 && cs.getLength() < 1100) {
+
+			} else if (cs.getLength() > 900 && cs.getLength() < 1100) {
 				drumType = "D";
-				
-			}else {
+
+			} else {
 				drumType = "A";
 			}
-			String sqlInsertQuery = "insert into "+table+" (`length`, `dbNo`, `dbDate`, `cableCode`, `drumNo`, `uniqueCode`, `drumType`) values (?,?,?,?,?,?,?)";
+			String sqlInsertQuery = "insert into " + table
+					+ " (`length`, `dbNo`, `dbDate`, `cableCode`, `drumNo`, `uniqueCode`, `drumType`) values (?,?,?,?,?,?,?)";
 			pstmt = connection.prepareStatement(sqlInsertQuery);
 			pstmt.setDouble(1, cs.getLength());
 			pstmt.setDouble(2, cs.getDbNo());
@@ -108,6 +109,33 @@ public class CableStoreImpl implements CableStoreDao {
 			pstmt.setString(6, cs.getUniqueCode());
 			pstmt.setString(7, drumType);
 			flag = pstmt.execute();
+
+		} catch (SQLException se) {
+			se.printStackTrace();
+		}
+		try {
+			AWSUtil.cleanUp(connection, pstmt, resultSet);
+		} catch (SQLException se) {
+			se.printStackTrace();
+		}
+
+		return flag;
+	}
+
+	@Override
+	public int updateStatusCableDrum(String table, double dbNo, String drumNo, String status) {
+
+		int flag  = 0;
+
+		try {
+			
+			String sqlUpdateQuery = "update " + table+ " set status = ? where dbNo = ? and drumNo = ?";
+			pstmt = connection.prepareStatement(sqlUpdateQuery);
+			pstmt.setString(1, status);
+			pstmt.setDouble(2, dbNo);
+			pstmt.setString(3, drumNo);
+			
+			flag = pstmt.executeUpdate();
 
 		} catch (SQLException se) {
 			se.printStackTrace();

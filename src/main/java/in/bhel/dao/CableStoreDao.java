@@ -10,6 +10,8 @@ public interface CableStoreDao {
 	
 	public boolean insertDrumIntoCableDrum(String table, CableStore cs);
 	
+	public int updateStatusCableDrum(String table, double dbNo, String drumNo, String status);
+	
 	
 
 }
