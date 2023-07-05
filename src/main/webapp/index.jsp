@@ -9,6 +9,6 @@
 </head>
 <body>
 <%@ include file="components/navbar.jsp" %>
-
+<%@ include file="components/allcss.jsp"%>
 </body>
 </html>

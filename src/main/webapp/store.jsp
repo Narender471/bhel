@@ -65,6 +65,6 @@
 		<input type ="submit" value = "submit to Store">
 		</div>
 	</form>
-
+<%@ include file="components/allcss.jsp"%>
 </body>
 </html>

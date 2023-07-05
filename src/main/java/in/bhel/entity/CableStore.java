@@ -8,6 +8,21 @@ public class CableStore {
 	private String cableCode = "";
 	private String drumNo = "";
 	private String uniqueCode = "";
+	private String status = "";
+	private String drumType = "";
+	
+	public String getDrumType() {
+		return drumType;
+	}
+	public void setDrumType(String drumType) {
+		this.drumType = drumType;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
 	public int getSno() {
 		return sno;
 	}

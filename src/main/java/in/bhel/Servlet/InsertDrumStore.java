@@ -37,7 +37,7 @@ public class InsertDrumStore extends HttpServlet {
 		cs.setUniqueCode(request.getParameter("dbNo") + " " + request.getParameter("drumNo"));
 
 		
-			if (csd.insertDrumToStore(cs)) {
+			if (csd.insertDrumDataAWS(cs)) {
 				System.out.println("Insertion Completed");
 				out.println("Insertion completed");
 			} else {
